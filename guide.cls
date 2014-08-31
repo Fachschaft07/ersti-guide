@@ -13,7 +13,7 @@
 \ProcessOptions \relax
 
 \LoadClass{article}
-\RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\RequirePackage[left=0.75in,right=0.75in,top=0.75in,bottom=0.75in]{geometry}
 \RequirePackage{wrapfig}
 \RequirePackage{graphicx}
 \RequirePackage[absolute]{textpos}
