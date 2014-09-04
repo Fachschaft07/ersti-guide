@@ -20,6 +20,11 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{calc}
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[ngerman]{babel}
+\RequirePackage{color}
+\RequirePackage{pifont}
+\RequirePackage{hyperref}
+
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
 \setcounter{secnumdepth}{0}
@@ -48,7 +53,8 @@
 \let\oldemph\tableofcontents
 \renewcommand{\tableofcontents}{\pagenumbering{gobble}\oldemph \newpage\pagenumbering{arabic}}
 
-
+\let\oldurl\url
+\renewcommand{\url}[1]{\textcolor{red}{\oldurl{#1}}}
 \newcommand*{\@imprintLogo}{}
 \newcommand{\imprintLogo}[1]{\gdef\@imprintLogo{#1}}
 \newcommand*{\@imprintText}{}
