@@ -23,7 +23,11 @@
 \RequirePackage[ngerman]{babel}
 \RequirePackage{color}
 \RequirePackage{pifont}
-\RequirePackage{hyperref}
+\RequirePackage{lmodern,textcomp}
+\RequirePackage{mathptmx}
+\RequirePackage[scaled=.90]{helvet}
+\RequirePackage{courier}
+\RequirePackage[hidelinks]{hyperref}
 
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
@@ -31,12 +35,16 @@
 \renewcommand{\headrulewidth}{0pt}
 \newcommand*\autowrap[1]{\wr@pletters#1\@nil}
 \def\wr@pletters#1#2\@nil{#1\allowbreak\if&#2&\else\wr@pletters#2\@nil\fi}
-
+\newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 \def\flushboth{%
 	\let\\\@normalcr
 	\@rightskip\z@skip \rightskip\@rightskip
 	\leftskip\z@skip
 	\parindent 1.5em\relax}
+
+\newcommand{\email}[1]{\textcolor{blue}{\href{mailto:#1}{#1}}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
 
 \newcommand{\figureRight}[2]{\begin{wrapfigure}{r}{#1}
     \centering
