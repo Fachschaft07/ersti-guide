@@ -27,6 +27,7 @@
 \RequirePackage{mathptmx}
 \RequirePackage[scaled=.90]{helvet}
 \RequirePackage{courier}
+\RequirePackage[percent]{overpic}
 \RequirePackage[hidelinks]{hyperref}
 
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
@@ -42,6 +43,13 @@
 	\leftskip\z@skip
 	\parindent 1.5em\relax}
 
+\newcommand{\overlayingImage}[8]{\begin{figure}
+		\centering
+			\begin{overpic}[width=#1, angle=#2]{#3}
+					\put(#4,#5){\includegraphics[width=#6, angle=#7]{#8}}
+				\end{overpic}
+				
+	\end{figure}}
 \newcommand{\email}[1]{\textcolor{blue}{\href{mailto:#1}{#1}}}
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
