@@ -43,6 +43,10 @@
 	\leftskip\z@skip
 	\parindent 1.5em\relax}
 
+\newcommand{\arrow}{\ding{213} }
+
+\renewcommand\labelitemi{\ding{226}}
+\newcommand{\doublebreak}{\linebreak\linebreak}
 \newcommand{\overlayingImage}[8]{\begin{figure}
 		\centering
 			\begin{overpic}[width=#1, angle=#2]{#3}
