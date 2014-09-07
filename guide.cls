@@ -13,7 +13,7 @@
 \ProcessOptions \relax
 
 \LoadClass{article}
-\RequirePackage[left=0.75in,right=0.75in,top=0.75in,bottom=0.75in]{geometry}
+\RequirePackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
 \RequirePackage{wrapfig}
 \RequirePackage{graphicx}
 \RequirePackage[absolute]{textpos}
@@ -34,8 +34,6 @@
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
 \setcounter{secnumdepth}{0}
 \renewcommand{\headrulewidth}{0pt}
-\newcommand*\autowrap[1]{\wr@pletters#1\@nil}
-\def\wr@pletters#1#2\@nil{#1\allowbreak\if&#2&\else\wr@pletters#2\@nil\fi}
 \newcommand{\changefont}[3]{\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 \def\flushboth{%
 	\let\\\@normalcr
@@ -46,7 +44,7 @@
 \newcommand{\arrow}{\ding{213} }
 
 \renewcommand\labelitemi{\ding{226}}
-\newcommand{\doublebreak}{\linebreak\linebreak}
+\newcommand{\doublebreak}{\\\linebreak}
 \newcommand{\overlayingImage}[8]{\begin{figure}
 		\centering
 			\begin{overpic}[width=#1, angle=#2]{#3}
@@ -59,13 +57,13 @@
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
 \newcommand{\figureRight}[2]{\begin{wrapfigure}{r}{#1}
-    \centering
     \includegraphics[width=#1]{#2}
+    \vspace{-1000mm}
 \end{wrapfigure}}
 
 \newcommand{\figureLeft}[2]{\begin{wrapfigure}{l}{0cm}
-    \centering
     \includegraphics[width=#1]{#2}
+    \vspace{-1000mm}
 \end{wrapfigure}}
 
 \newcommand{\frontcover}[1]{\pagenumbering{gobble}\begin{textblock}{3}(0,0)\noindent\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}\leavevmode\newpage\pagenumbering{arabic}}
@@ -153,6 +151,7 @@
 	\raggedright
 	\newpage
 	\pagenumbering{arabic}}
+	\flushboth
 \fi
 
 \newcommand*{\@forewordContent}{}
