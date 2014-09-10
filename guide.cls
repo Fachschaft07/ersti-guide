@@ -67,7 +67,7 @@
 \end{wrapfigure}}
 
 \newcommand{\frontcover}[1]{\pagenumbering{gobble}\begin{textblock}{3}(0,0)\noindent\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}\leavevmode\newpage\pagenumbering{arabic}}
-\newcommand{\backcover}[1]{\newpage\pagenumbering{gobble}\begin{textblock}{3}(0,0)\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}}
+\newcommand{\backcover}[1]{\newpage\pagenumbering{gobble}\raggedright\begin{textblock}{3}(0,0)\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}}
 \let\oldemph\tableofcontents
 \renewcommand{\tableofcontents}{\pagenumbering{gobble}\oldemph \newpage\pagenumbering{arabic}}
 
