@@ -11,6 +11,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{wrapfig}    % vor der Zeile \begin{document} einfügen
 
 
 \begin{document}
@@ -38,6 +41,15 @@
 \input{inputs/freizeit}
 
 \input{inputs/future}
+
+%Lageplan
+%\includepdf[pages=-]{inputs/Lageplan/Lageplan1} 
+%\includepdf[pages=-]{inputs/Lageplan/Lageplan2} 
+%\includepdf[pages=-]{inputs/Lageplan/Lageplan3} 
+%\includepdf[pages=-]{inputs/Lageplan/Lageplan4} 
+\input{inputs/Lageplan}
+
 %hinteres cover
-\backcover{wasserzeichen}
+\backcover{Deckblatt-hinten}
+%\backcover{wasserzeichen}
 \end{document}
