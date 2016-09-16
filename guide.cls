@@ -29,6 +29,7 @@
 \RequirePackage{courier}
 \RequirePackage[percent]{overpic}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage[inline]{enumitem}
 
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
@@ -65,6 +66,10 @@
     \includegraphics[width=#1]{#2}
     \vspace{-1000mm}
 \end{wrapfigure}}
+
+\newcommand{\siteclick}{\space--\textgreater\space}
+\newlist{sitenav}{description*}{4}
+\setlist[sitenav]{before={\kern-1mm\noindent\color{red}},itemjoin={\siteclick\kern-2mm},mode=unboxed,afterlabel=\unskip{{~}}}
 
 \newcommand{\frontcover}[1]{\pagenumbering{gobble}\begin{textblock}{3}(0,0)\noindent\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}\leavevmode\newpage\pagenumbering{arabic}}
 \newcommand{\backcover}[1]{\newpage\pagenumbering{gobble}\raggedright\begin{textblock}{3}(0,0)\includegraphics[height=\paperheight, width=\paperwidth]{#1}\end{textblock}}
