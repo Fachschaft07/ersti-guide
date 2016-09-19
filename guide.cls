@@ -30,6 +30,7 @@
 \RequirePackage[percent]{overpic}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage[inline]{enumitem}
+\RequirePackage{cleveref}
 
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
@@ -66,6 +67,7 @@
     \includegraphics[width=#1]{#2}
     \vspace{-1000mm}
 \end{wrapfigure}}
+
 
 \newcommand{\siteclick}{\space--\textgreater\space}
 \newlist{sitenav}{description*}{4}
