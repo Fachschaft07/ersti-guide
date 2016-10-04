@@ -28,9 +28,26 @@
 \RequirePackage[scaled=.90]{helvet}
 \RequirePackage{courier}
 \RequirePackage[percent]{overpic}
-\RequirePackage[hidelinks]{hyperref}
 \RequirePackage[inline]{enumitem}
 \RequirePackage{cleveref}
+
+\RequirePackage{titlesec}
+\RequirePackage{lmodern,textcomp}
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\Large\bfseries}
+\titleformat*{\paragraph}{\Large\bfseries}
+\titleformat*{\subparagraph}{\Large\bfseries}
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{textcomp}
+\RequirePackage{pdfpages}
+\RequirePackage{graphicx}
+\RequirePackage{wrapfig}    % vor der Zeile \begin{document} einfügen
+
+
+\RequirePackage[hidelinks]{hyperref}
 
 \newcommand{\thisMonth}{\ifcase \month \or Januar \or Februar \or März \or April \or Mai %
 \or Juni \or Juli \or August \or September \or Oktober \or November \or Dezember \fi}
